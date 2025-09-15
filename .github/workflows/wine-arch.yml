@@ -23,6 +23,7 @@ jobs:
           sed -i 's/wayland_driver="false"/wayland_driver="true"/' customization.cfg
           sed -i 's/_proton_fs_hack="false"/_proton_fs_hack="true"/' customization.cfg
           sed -i 's/_protonify="false"/_protonify="true"/' customization.cfg
+          sed -i 's/_use_ntsync="false"/_use_ntsync="true"/' customization.cfg
           su user -c "yes|PKGDEST=/tmp/wine-tkg makepkg --noconfirm -s"
 
       - name: Archive the artifacts
