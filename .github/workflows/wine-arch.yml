@@ -24,6 +24,7 @@ jobs:
           sed -i 's/_use_esync="true"/_use_esync="false"/' customization.cfg
           sed -i 's/_use_fsync="true"/_use_fsync="false"/' customization.cfg
           sed -i 's/_use_ntsync="false"/_use_ntsync="true"/' customization.cfg
+          sed -i 's/_community_patches=""/_community_patches="proton-fsr-90.mypatch"/' customization.cfg
           su user -c "yes|PKGDEST=/tmp/wine-tkg makepkg --noconfirm -s"
 
       - name: Archive the artifacts
